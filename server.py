@@ -28,11 +28,17 @@ def handle_client(client):
             message = client.recv(4096)
             if not message:
                 break
-            # AJOUTE CETTE LIGNE POUR TOUT VOIR :
-            print(f"[Serveur] Données chiffrées reçues : {message}")
-            
             broadcast(message, client)
         except:
             clients.remove(client)
             client.close()
             break
+
+print(f"[+] Serveur de confiance démarré sur {HOST}:{PORT}...")
+while True:
+    client_socket, address = server.accept()
+    print(f"[+] Nouvelle connexion depuis {str(address)}")
+    clients.append(client_socket)
+    
+    thread = threading.Thread(target=handle_client, args=(client_socket,))
+    thread.start()
