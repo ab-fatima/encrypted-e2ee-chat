@@ -13,3 +13,7 @@ A secure, multi-client chat application written in Python demonstrating modern c
 
 ```bash
 pip install cryptography
+
+## Demo
+
+[![Watch Demo](https://img.youtube.com/vi/C6vMQj1Oun0/0.jpg)](https://www.youtube.com/watch?v=C6vMQj1Oun0)
