@@ -1,0 +1,10 @@
+# Fichiers temporaires générés par Python (inutiles sur GitHub)
+__pycache__/
+*.pyc
+
+# Fichiers de configuration locale ou d'environnement (clés secrètes, etc.)
+.env
+
+# Fichiers système spécifiques à ton ordinateur (optionnel)
+.DS_Store
+Thumbs.db
